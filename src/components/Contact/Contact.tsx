@@ -32,7 +32,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="contact-form" id="contact">
+    <div className="contact-form " id="contact">
       {/* Left side */}
       <div>
         <h1 className="text-gray-800 text-3xl font-extrabold">Let's Talk</h1>
@@ -98,7 +98,7 @@ const Contact = () => {
       </div>
 
       {/* Right side form */}
-      <div className="c-right">
+      <div className="c-right mb-[2rem]">
         <form ref={form} onSubmit={sendEmail}>
           <input type="text" name="user_name" className="user" placeholder="Name" required />
           <input type="email" name="user_email" className="user" placeholder="Email" required />
