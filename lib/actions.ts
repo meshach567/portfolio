@@ -20,9 +20,9 @@ export async function sendEmail(data: ContactFormInputs) {
     try {
         const { name, email, message } = result.data
         const { data, error } = await resend.emails.send({
-            from: 'fariraimasocha@gmail.com',
+            from: 'meshacharinze@gmail.com',
             to: [email],
-            cc: ['fariraimasocha@gmail.com'],
+            cc: ['meshacharinze@gmail.com'],
             subject: 'Contact form submission',
             text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
             react: ContactFormEmail({ name, email, message })
@@ -69,7 +69,7 @@ export async function subscribe(data: NewsletterFormInputs) {
 
         // Send a welcome email
         const { error: emailError } = await resend.emails.send({
-            from: 'Farirai Masocha <onboarding@resend.dev>',
+            from: 'Meshach Arinze <onboarding@resend.dev>',
             to: email,
             subject: 'Welcome to our newsletter!',
             html: '<p>Thank you for subscribing to our newsletter!</p>'
